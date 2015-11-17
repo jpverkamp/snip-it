@@ -1,0 +1,8 @@
+# Compiled/backups
+*~
+*.bak
+*.pyc
+__pycache__
+
+# Data directory
+data
