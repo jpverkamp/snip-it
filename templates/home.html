@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block body %}
-<form action="/save" method="POST">
-    <input type="submit" />
+<form action="" method="POST">
+    <input type="submit" name="action" value="Save" />
+    {% if edit_mode %}
+	    <input type="submit" name="action" value="Delete" />
+    	Edit key: <input name="edit_key" />
+    {% endif %}
     <div>
-        <textarea name="code" rows="40" cols="80"></textarea>
+        <textarea name="code" rows="40" cols="80">{% if code %}{{ code }}{% endif %}</textarea>
     </div>
 </form>
 {% endblock %}
